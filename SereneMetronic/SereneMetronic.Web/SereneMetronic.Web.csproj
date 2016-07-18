@@ -1844,6 +1844,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\metronic\assets\" />
     <Folder Include="Scripts\typings\site\" />
   </ItemGroup>
   <ItemGroup>

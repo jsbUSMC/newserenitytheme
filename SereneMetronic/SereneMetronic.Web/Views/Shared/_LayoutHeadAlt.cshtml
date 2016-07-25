@@ -4,26 +4,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <link rel="home" id="ApplicationPath" href="~/" />
 <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+
+<!-- Global Mandatory Styles -->
 @Html.Stylesheet("~/Content/font-open-sans.css")
 @Html.Stylesheet("~/Content/font-awesome.css")
 @Html.Stylesheet("~/Content/simple-line-icons.css")
 @Html.Stylesheet("~/Content/ionicons.css")
-@Html.Stylesheet("~/Content/aristo/aristo.css")
 @Html.Stylesheet("~/Content/bootstrap.css")
+@Html.Stylesheet("~/Content/metronic/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.css")
+
+<!-- Plugin Styles -->
 @Html.Stylesheet("~/Content/colorbox/jquery.colorbox.css")
 @Html.Stylesheet("~/Content/jquery.fileupload.css")
 @Html.Stylesheet("~/Content/pace.css")
 @Html.Stylesheet("~/Content/slick.grid.css")
 @Html.Stylesheet("~/Content/css/select2.css")
 @Html.Stylesheet("~/Content/toastr.css")
-@Html.Stylesheet("~/Content/metronic/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css")
-@Html.Stylesheet("~/Content/metronic/assets/global/css/components-md.min.css")
-@Html.Stylesheet("~/Content/metronic/assets/global/css/plugins-md.min.css")
-@Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/layout.min.css")
-@Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/themes/darkblue.min.css")
-@Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/custom.min.css")
 @Html.Stylesheet("~/Content/serenity/serenity.css")
 @Html.Stylesheet("~/Content/site/site.css")
+
+<!-- Theme Global Styles-->
+@Html.Stylesheet("~/Content/metronic/assets/global/css/components-md.css")
+@Html.Stylesheet("~/Content/metronic/assets/global/css/plugins-md.css")
+
+<!-- Theme Layout Styles -->
+@Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/layout.css")
+@Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/themes/darkblue.css")
+@Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/custom.min.css")
+
 @{var cookie = Request.Cookies["ThemePreference"]; var theme = cookie != null && !cookie.Value.IsEmptyOrNull() ? cookie.Value : "default"; }
 <script type="application/json" id="ScriptCulture">
     @Html.Raw(Serenity.JSON.Stringify(new ScriptCulture()))
@@ -38,7 +46,6 @@
 @Html.Script("~/Scripts/jquery.slimscroll.js")
 @Html.Script("~/Scripts/mousetrap.js")
 @Html.Script("~/Scripts/fastclick/fastclick.js")
-@Html.Script("~/Scripts/adminlte/app.js")
 @Html.Script("~/Scripts/Site/SereneMetronic.Web.js")
 <script src="~/DynJS.axd/@HtmlScriptExtensions.GetLocalTextInclude(this.Html, "Site")"></script>
 <script src="~/DynJS.axd/@DynamicScriptManager.GetScriptInclude("ColumnsBundle")"></script>

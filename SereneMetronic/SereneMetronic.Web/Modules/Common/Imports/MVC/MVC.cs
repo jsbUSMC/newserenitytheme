@@ -285,6 +285,7 @@ namespace MVC
             public const string Error = "~/Views/Shared/Error.cshtml";
             public const string LeftNavigation = "~/Views/Shared/LeftNavigation.cshtml";
             public const string LeftNavigationAlt = "~/Views/Shared/LeftNavigationAlt.cshtml";
+            public const string _LayoutBodyScripts = "~/Views/Shared/_LayoutBodyScripts.cshtml";
         }
     }
 }

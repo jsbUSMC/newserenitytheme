@@ -21,12 +21,10 @@
 <script src="~/Scripts/daterangepicker/daterangepicker.js"></script>
 <script src="~/Scripts/datepicker/bootstrap-datepicker.js"></script>
 <script src="~/Scripts/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<script src="~/Scripts/adminlte/pages/dashboard.js"></script>
-<script src="~/Scripts/adminlte/demo.js"></script>
 }
 
 @section ContentHeader {
-    <h1>@LocalText.Get("Navigation.Dashboard")<small>@Html.Raw(Texts.Site.Dashboard.ContentDescription)</small></h1>
+    @LocalText.Get(Texts.Site.Dashboard.ContentTitle) <small>@Html.Raw(Texts.Site.Dashboard.ContentDescription)</small>
 }
 
 <!-- Small boxes (Stat box) -->

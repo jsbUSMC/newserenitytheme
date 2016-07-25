@@ -13,19 +13,19 @@ for (var i = 0; i <= depth; i++)
     }
 }
 
-var klass = "nav-item " + (isactive ? "active" : "");
+var klass = "nav-item " + (isactive ? "active open" : "");
 var icon = (item.IconClass ?? (item.Children.Count > 0 ? "icon-layers" : (depth == 0 ? "icon-link" : "fa-circle-o")));
 var title = (LocalText.TryGet("Navigation." + category + item.Title) ?? item.Title);
 var sectionUrl = (item.Url ?? "javascript:;");
 var target = item.Target; if (target != null) { target += " target=" + target; }
 
     <li class="@klass">
-        <a href="@sectionUrl" @target>
+        <a href="@sectionUrl" @target class="nav-link nav-toggle">
             <i class="fa @(icon)"></i>
             <span class="title">@title</span>
             @if (!item.Children.IsEmptyOrNull())
             {
-                <i class="fa fa-angle-left pull-right"></i>
+                <span class="arrow"></span>
             }
         </a>
 

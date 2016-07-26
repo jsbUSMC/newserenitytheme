@@ -5,9 +5,6 @@
 @Html.Script("~/Scripts/pace.js")
 @foreach (var x in CommonIncludes.Scripts)
 { @Html.Script(x) }
-@Html.Script("~/Scripts/metronic/assets/global/plugins/js.cookie.min.js")
-@Html.Script("~/Scripts/metronic/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js")
-@Html.Script("~/Scripts/metronic/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.js")
 @Html.Script("~/Scripts/jquery.cropzoom.js")
 @Html.Script("~/Scripts/jquery.fileupload.js")
 @Html.Script("~/Scripts/jquery.iframe-transport.js")
@@ -15,13 +12,6 @@
 @Html.Script("~/Scripts/mousetrap.js")
 @Html.Script("~/Scripts/fastclick/fastclick.js")
 
-<!-- Theme Global Script-->
-@Html.Script("~/Scripts/metronic/assets/global/scripts/app.js")
-
-<!-- Theme Layout Scripts-->
-@Html.Script("~/Scripts/metronic/assets/layouts/layout/scripts/layout.js")
-@Html.Script("~/Scripts/metronic/assets/layouts/layout/scripts/demo.js")
-@Html.Script("~/Scripts/metronic/assets/layouts/global/scripts/quick-sidebar.js")
 @Html.Script("~/Scripts/Site/SereneMetronic.Web.js")
 <script src="~/DynJS.axd/@HtmlScriptExtensions.GetLocalTextInclude(this.Html, "Site")"></script>
 <script src="~/DynJS.axd/@DynamicScriptManager.GetScriptInclude("ColumnsBundle")"></script>

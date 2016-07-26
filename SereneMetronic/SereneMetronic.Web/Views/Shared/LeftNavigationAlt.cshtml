@@ -13,16 +13,16 @@ for (var i = 0; i <= depth; i++)
     }
 }
 
-var klass = "nav-item " + (isactive ? "active open" : "");
+var cssClass = "nav-item" + (isactive ? " active" : "");
 var icon = (item.IconClass ?? (item.Children.Count > 0 ? "icon-layers" : (depth == 0 ? "icon-link" : "fa-circle-o")));
 var title = (LocalText.TryGet("Navigation." + category + item.Title) ?? item.Title);
 var sectionUrl = (item.Url ?? "javascript:;");
 var target = item.Target; if (target != null) { target += " target=" + target; }
 
-    <li class="@klass">
-        <a href="@sectionUrl" @target class="nav-link nav-toggle">
+    <li class="@cssClass">
+        <a href="@sectionUrl" @target>
             <i class="fa @(icon)"></i>
-            <span class="title">@title</span>
+            <span>@title</span>
             @if (!item.Children.IsEmptyOrNull())
             {
                 <span class="arrow"></span>
@@ -30,17 +30,17 @@ var target = item.Target; if (target != null) { target += " target=" + target; }
         </a>
 
         @if (item.Children.Count > 0)
-    {
-            <ul class="sub-menu" style="display: block;">
+        {
+            <ul class="sub-menu">
                 @{path[depth + 1] = 0; }
                 @foreach (var child in item.Children)
                 {
                     @renderItem(child, depth + 1, path, category + item.Title + "/");
-        }
+                }
             </ul>
-                    }
+        }
     </li>
-                    path[depth]++;
+    path[depth]++;
 }
 
 @{var path = new int[10]; }
@@ -49,6 +49,7 @@ var target = item.Target; if (target != null) { target += " target=" + target; }
     @renderItem(item, 0, path, "");
 }
 
+<!--
 <script type="text/javascript">
     function openWindow(url, width, height) {
         height = height || (screen.availHeight - 60);
@@ -59,3 +60,4 @@ var target = item.Target; if (target != null) { target += " target=" + target; }
             ", scrollbars=1, resizable=yes, left=" + x + ", top=" + y);
     }
 </script>
+-->

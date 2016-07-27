@@ -27,7 +27,7 @@
 
 <!-- Theme Layout Styles -->
 @Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/layout.css")
-@Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/themes/darkblue.css")
+<link rel="stylesheet" href="@Url.Content("~/Content/metronic/assets/layouts/layout/css/themes/darkblue.min.css")" id="style_color" type="text/css" />
 @Html.Stylesheet("~/Content/metronic/assets/layouts/layout/css/custom.min.css")
 
 @{var cookie = Request.Cookies["ThemePreference"]; var theme = cookie != null && !cookie.Value.IsEmptyOrNull() ? cookie.Value : "default"; }
@@ -53,7 +53,7 @@
 
 <!-- Theme Layout Scripts-->
 @Html.Script("~/Content/metronic/assets/layouts/layout/scripts/layout.js")
-@Html.Script("~/Content/metronic/assets/layouts/layout/scripts/demo.js")
+@Html.Script("~/Content/metronic/assets/layouts/layout/scripts/demo.min.js")
 @Html.Script("~/Content/metronic/assets/layouts/global/scripts/quick-sidebar.js")
 <script src="~/DynJS.axd/@HtmlScriptExtensions.GetLocalTextInclude(this.Html, "Site")"></script>
 <script src="~/DynJS.axd/@DynamicScriptManager.GetScriptInclude("ColumnsBundle")"></script>

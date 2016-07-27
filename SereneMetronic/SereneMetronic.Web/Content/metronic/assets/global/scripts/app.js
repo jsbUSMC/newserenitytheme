@@ -11,7 +11,7 @@ var App = function() {
 
     var resizeHandlers = [];
 
-    var assetsPath = '../assets/';
+    var assetsPath = Q.resolveUrl('~/Content/metronic/assets/');
 
     var globalImgPath = 'global/img/';
 

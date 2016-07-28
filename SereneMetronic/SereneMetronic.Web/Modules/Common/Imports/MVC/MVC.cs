@@ -281,6 +281,7 @@ namespace MVC
             public const string _LayoutAlt = "~/Views/Shared/_LayoutAlt.cshtml";
             public const string _LayoutHead = "~/Views/Shared/_LayoutHead.cshtml";
             public const string _LayoutHeadAlt = "~/Views/Shared/_LayoutHeadAlt.cshtml";
+            public const string _LayoutHeadAlt2 = "~/Views/Shared/_LayoutHeadAlt2.cshtml";
             public const string _LayoutNoNavigation = "~/Views/Shared/_LayoutNoNavigation.cshtml";
             public const string Error = "~/Views/Shared/Error.cshtml";
             public const string LeftNavigation = "~/Views/Shared/LeftNavigation.cshtml";

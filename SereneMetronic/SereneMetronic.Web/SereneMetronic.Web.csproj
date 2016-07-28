@@ -11677,6 +11677,7 @@
     <Content Include="Views\Shared\_LayoutHeadAlt.cshtml" />
     <Content Include="Views\Shared\LeftNavigationAlt.cshtml" />
     <Content Include="Views\Shared\_LayoutBodyScripts.cshtml" />
+    <Content Include="Views\Shared\_LayoutHeadAlt2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

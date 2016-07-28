@@ -11,11 +11,11 @@
 <html lang="@UICulture" class="no-js@(hideNav ? " no-navigation" : "")">
 <!--<![endif]-->
 <head>
-    @{Html.RenderPartial(MVC.Views.Shared._LayoutHeadAlt);}
+    @{Html.RenderPartial(MVC.Views.Shared._LayoutHeadAlt2);}
     @RenderSection("Head", false)
     <title>@(ViewData["Title"]) - SereneMetronic</title>
 </head>
-<body id="s-@(ViewData["PageId"])Page" class="@(ViewData["BodyClass"]) page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-md @(hideNav ? " no-navigation" : " has-layout-event")">
+<body id="s-@(ViewData["PageId"])Page" class="@(ViewData["BodyClass"]) page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-md @(hideNav ? " no-navigation" : " ")">
 
     @if (hideNav)
     {
@@ -133,7 +133,7 @@
                     <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
                     <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
                     <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-                    <ul id="SidebarMenu" class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="false" data-slide-speed="200" style="padding-top: 20px">
+                    <ul id="SidebarMenu" class="page-sidebar-menu page-header-fixed " data-keep-expanded="false" data-auto-scroll="false" data-slide-speed="200" style="padding-top: 20px">
                         <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
                         <li class="sidebar-toggler-wrapper hide">
                             <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
